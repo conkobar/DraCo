@@ -3,4 +3,4 @@
  ### <center>Description</center>
  ##### &emsp; This is a website that we built for a custom frontend project, and this is placeholder text.
  ---
- [Matthew Allen](https://github.com/mdallen5393), [Sarah McGowan](https://github.com/conkobar), and [Buzz Kleine](https://github.com/conkobar)
+ [Matthew Allen](https://github.com/mdallen5393), [Sarah McGowan](https://github.com/GoldLion1011), and [Buzz Kleine](https://github.com/conkobar)
