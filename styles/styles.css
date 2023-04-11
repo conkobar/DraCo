@@ -22,5 +22,12 @@ nav {
   background-color: var(--color-dark);
 }
 
+header {
+  background-image: url('../images/misc/hero.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:cover
+}
 
 /* FOOTER STYLING */
