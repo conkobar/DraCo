@@ -19,13 +19,37 @@
 <body>
 	<header>
 	<!-- Nav Bar -->
-		<nav class="d-flex flex-column flex-sm-row pt-4 bg-dark">
+		<nav class="d-flex flex-column flex-sm-row">
 			<!-- Logo -->
 			<a href="index.html" class="d-flex flex-column flex-sm-row col-sm-6 align-items-center">
 				<img class="m-2" src="../images/logos/logo_symbol.png" height="100px" width="auto">
-				<img class="m-2" src="../images/logos/logo_text.png" height="70px" width="auto">
+				<img class="m-2" src="../images/logos/logo_text.png" height="60px" width="auto">
 			</a>
+			<!-- Hamburger -->
+			<button class="navbar-toggler float-left position-absolute d-sm-none" type="button"
+				data-toggle="collapse" data-target="#navbarLinks">
+				<span><img height="50px" src="../images/misc/menu-bar.png"></span>
+			</button>
+			<!-- Nav links -->
+			<div class="collapse navbar-collapse d-sm-flex col-sm-6" id="navbarLinks">
+				<ul class="navbar-nav text-uppercase ml-auto flex-sm-row align-items-center font-weight-bold">
+					<li class="navbar-item">
+						<a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="shop.html">SHOP</a>
+					</li>
+					<li class="navbar-item">
+						<a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="contact.html">CONTACT</a>
+					</li>
+					<li class="navbar-item">
+						<a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="cart.html">CART</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
+	<footer>
+		<div class="attributions">
+			<a href="https://www.flaticon.com/free-icons/menu-bar" title="menu bar icons">Menu bar icons created by Md Tanvirul Haque - Flaticon</a>
+		</div>
+	</footer>
 </body>
 </html>

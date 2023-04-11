@@ -10,11 +10,17 @@
   --font-main: 'Source Serif Pro', serif;
 }
 
+html {
+  background-color: var(--color-light);
+}
 
 h1 {
   font-family: var(--font-subtitle);
 }
 
-.bg-dark {
+nav {
   background-color: var(--color-dark);
 }
+
+
+/* FOOTER STYLING */
