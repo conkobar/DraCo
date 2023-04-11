@@ -14,3 +14,7 @@
 h1 {
   font-family: var(--font-subtitle);
 }
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
