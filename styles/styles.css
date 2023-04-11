@@ -1,0 +1,179 @@
+@import url("style.css");
+
+.bg-dark {
+	background-color: #071629 !important;
+}
+
+.nav-link {
+	color: white;
+}
+
+.purple-bg {
+	background-color: #C271FF;
+}
+
+.purple {
+	color: #C271FF;
+}
+
+.btn {
+	background-color: #C271FF;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+	border-color: #C271FF;
+}
+
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.fb-icon:before {
+	font-family: 'holberton_school-icon';
+	content: "\e908";
+	color: var(--color-white);
+}
+
+.twitter-icon:before {
+	font-family: 'holberton_school-icon';
+	content: "\e90f";
+	color: var(--color-white);
+}
+
+.insta-icon:before {
+	font-family: 'holberton_school-icon';
+	content: "\e90a";
+	color: var(--color-white);
+}
+
+.display-4 {
+	color: white;
+}
+
+.leftArrow:before {
+	content: "\e903";
+	font-size: 8rem;
+}
+
+.rightArrow:before {
+	content: "\e902";
+	font-size: 8rem;
+}
+
+.leftArrowVideo:before {
+	content: '\e903';
+	font-size: 8rem;
+	color: black;
+}
+
+.rightArrowVideo {
+	background-image: url('images/arrow_black_right.png');
+	font-size: 8rem;
+	color: black;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 29px;
+    height: 62px;
+    background: no-repeat 50%/100% 100%
+}
+.carousel-control-prev-icon {
+    background-image: url("./images/arrow_white_left.png");
+}
+.carousel-control-next-icon {
+    background-image: url("./images/arrow_white_right.png");
+}
+
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #C271FF;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 5s cubic-bezier(0.075, 0.82, 0.165, 5) infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* slick stuff */
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  color: #333;
+  transform: translateY(-69%); /* nice */
+}
+
+.slick-prev {
+  background: url('./images/arrow_black_left.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
+
+.slick-next {
+  background: url('./images/arrow_black_right.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
+
+.slick-prev {
+  left: 0;
+  font-size: 0;
+  width: 29px;
+  height: 62px;
+  background-color:rgba(0, 0, 0, 0.0);
+}
+
+.slick-next {
+  right: 0;
+  font-size: 0;
+  width: 29px;
+  height: 62px;
+  background-color:rgba(0, 0, 0, 0.0);
+}
+
+
+/* Get playbutton to work */
+.card-img-top {
+  position: relative;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: auto;
+}
+
+.card-img-top img {
+  max-width: 100%;
+  height: auto;
+}
+
+.holberton_school-icon-check {
+  font-size: 36px;
+  padding: 1.75rem;
+}
+
+.signal {
+  width: 192px;
+  height: 88px;
+}
