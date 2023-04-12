@@ -16,7 +16,11 @@
 	<!-- STYLESHEETS -->
 	<link rel="stylesheet" href="../styles/styles.css">
 
+	<!-- SCRIPTS -->
+	<script type="module" src="../scripts/scripts.js"></script>
+
 </head>
+
 <body class="bg-light">
 	<header>
 	<!-- Nav Bar -->
@@ -44,36 +48,17 @@
 		<div class="d-flex justify-content-center pb-4">
 			<img id="hero-img" class="img-fluid" src="../images/logos/logo_tp_light_text_bordered.png">
 		</div>
+
+		<!-- FEATURED PRODUCTS CAROUSEL -->
+		<section class="container-fluid bg-dark">
+			<h1 class="livvic text-center m-0">Featured Products</h1>
+			
+			<ul id="product-list"></ul>
+	
+		</section>
 	</header>
 
-	<!-- FEATURED PRODUCTS CAROUSEL -->
-	<section class="container-fluid bg-dark">
-		<h1 class="livvic text-center m-0">Featured Products</h1>
-		
 
-	</section>
-
-	<ul id="product-list"></ul>
-
-<script>
-  // Get a reference to the 'Products' collection
-  var productsRef = firebase.firestore().collection('Products');
-
-  // Get all documents from the 'Products' collection
-  productsRef.get().then(snapshot => {
-    snapshot.forEach(doc => {
-      // Get the product name from the document data
-      var productName = doc.data().name;
-
-      // Create a new list item element
-      var li = document.createElement('li');
-      li.textContent = productName;
-
-      // Append the list item to the product list
-      document.getElementById('product-list').appendChild(li);
-    });
-  });
-</script>
 
 	<!-- MISSION STATEMENT -->
 	<section>
