@@ -10,14 +10,21 @@
 
 .bg-light {
   background-color: var(--color-light) !important;
+  color: var(--color-black);
 }
 
 .bg-dark {
   background-color: var(--color-dark) !important;
+  color: var(--color-light);
 }
 
 .bg-black {
   background-color: var(--color-black) !important;
+  color: var(--color-light);
+}
+
+.bg-gold {
+  background-color: var(--color-gold) !important;
 }
 
 body {
@@ -32,13 +39,9 @@ html {
   background-color: var(--color-light);
 }
 
-h1 {
-  font-family: var(--font-subtitle);
-}
-
 nav {
   color: var(--color-light);
-  font-size: 1.5rem;
+  font-size: .9rem;
   letter-spacing: .4rem;
   text-shadow: 2px 2px 2px var(--color-dark);
 }

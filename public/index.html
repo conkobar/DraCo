@@ -46,11 +46,46 @@
 		</div>
 	</header>
 
-	<section class="container-fluid bg-light">
-		<h1 class="">Our Best Sellers</h1>
+	<!-- FEATURED PRODUCTS CAROUSEL -->
+	<section class="container-fluid bg-dark">
+		<h1 class="livvic text-center m-0">Featured Products</h1>
+		
 
 	</section>
 
+	<ul id="product-list"></ul>
+
+<script>
+  // Get a reference to the 'Products' collection
+  var productsRef = firebase.firestore().collection('Products');
+
+  // Get all documents from the 'Products' collection
+  productsRef.get().then(snapshot => {
+    snapshot.forEach(doc => {
+      // Get the product name from the document data
+      var productName = doc.data().name;
+
+      // Create a new list item element
+      var li = document.createElement('li');
+      li.textContent = productName;
+
+      // Append the list item to the product list
+      document.getElementById('product-list').appendChild(li);
+    });
+  });
+</script>
+
+	<!-- MISSION STATEMENT -->
+	<section>
+
+	</section>
+
+	<!-- TESTIMONIALS CAROUSEL -->
+	<section>
+
+	</section>
+
+	<!-- FOOTER -->
 	<footer>
 		<!-- <div class="attributions">
 			<a href="https://www.flaticon.com/free-icons/menu-bar" title="menu bar icons">Menu bar icons created by Md Tanvirul Haque - Flaticon</a>
