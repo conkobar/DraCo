@@ -12,16 +12,12 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore(app);
 
 // Get the unordered list element
-var ul = document.getElementById("product-list");
+let $ul = $("#product-list");
 
 // Get all documents from the Products collection
 db.collection("Products").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
-    // Create a new list item element
-    var li = document.createElement("li");
-    // Set the text content to the product name
-    li.textContent = doc.data().name;
-    // Append the list item to the unordered list
-    ul.appendChild(li);
+    let $li = $(`<li>${doc.data().name}</li>`);
+    $ul.append($li);
   });
 });
