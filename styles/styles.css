@@ -5,9 +5,15 @@
   --color-dark: #2f2f2f;
   --color-light: #f6f6f6;
   --color-gold: #ffcb74;
+  --font-family: 'Source Serif Pro', serif !important;
+}
 
-  --font-subtitle: 'Livvic', sans-serif;
-  --font-main: 'Source Serif Pro', serif;
+body {
+  font-family: 'Source Serif Pro', serif !important;
+}
+
+.livvic {
+  font-family: 'Livvic', sans-serif;
 }
 
 html {
