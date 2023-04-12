@@ -8,6 +8,18 @@
   --font-family: 'Source Serif Pro', serif !important;
 }
 
+.bg-light {
+  background-color: var(--color-light) !important;
+}
+
+.bg-dark {
+  background-color: var(--color-dark) !important;
+}
+
+.bg-black {
+  background-color: var(--color-black) !important;
+}
+
 body {
   font-family: 'Source Serif Pro', serif !important;
 }
@@ -25,7 +37,19 @@ h1 {
 }
 
 nav {
-  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 1.5rem;
+  letter-spacing: .4rem;
+  text-shadow: 2px 2px 2px var(--color-dark);
+}
+
+.navbar-item a:hover {
+  color: var(--color-gold) !important;
+}
+
+#hero-img {
+  width: 50%;
+  max-width: 400px;
 }
 
 header {
@@ -35,5 +59,7 @@ header {
   background-position: top;
   background-size:cover
 }
+
+
 
 /* FOOTER STYLING */
