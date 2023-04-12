@@ -35,6 +35,18 @@ body {
   font-family: 'Livvic', sans-serif;
 }
 
+.gold {
+  color: var(--color-gold)
+}
+
+.dark {
+  color: var(--color-dark)
+}
+
+.light {
+  color: var(--color-light)
+}
+
 html {
   background-color: var(--color-light);
 }
@@ -66,3 +78,10 @@ header {
 
 
 /* FOOTER STYLING */
+h5 {
+  letter-spacing: 3px;
+}
+
+#footer-logo {
+  width: 107px;
+}
