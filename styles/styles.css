@@ -4,7 +4,7 @@
   --color-black: #111;
   --color-dark: #2f2f2f;
   --color-light: #f6f6f6;
-  --color-gold: #ffcb74;
+  --color-gold: #deb16f;
   --font-family: 'Source Serif Pro', serif !important;
 }
 
@@ -60,7 +60,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-position: top;
-  background-size:cover
+  background-size:100%;
 }
 
 
