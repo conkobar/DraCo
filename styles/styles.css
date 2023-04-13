@@ -63,6 +63,8 @@ header {
   background-size:100%;
 }
 
-
+h1 {
+  letter-spacing: .4rem;
+}
 
 /* FOOTER STYLING */
