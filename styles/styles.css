@@ -87,3 +87,17 @@ h5 {
 #footer-logo {
   width: 107px;
 }
+
+
+/* #region SHOPPING CART */
+
+.fa-cart-shopping {
+  font-size: xx-large;
+}
+
+.fa-cart-shopping:hover {
+  cursor: pointer;
+  color: var(--color-gold)
+}
+
+/* #endregion */
