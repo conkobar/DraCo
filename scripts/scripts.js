@@ -13,15 +13,16 @@ const db = firebase.firestore(app);
 
 // Get the unordered list element
 let $ul = $("#product-list");
+let $testimonials = $("#testimonials-list")
 
 // Get all documents from the Products collection
-db.collection("Products").get().then((querySnapshot) => {
+// db.collection("Products").get().then((querySnapshot) => {
   // prints all elements into list in HTML
-  querySnapshot.forEach((doc) => {
-    let $li = $(`<li>${doc.data().name}</li>`);
-    $ul.append($li);
-  });
-});
+//   querySnapshot.forEach((doc) => {
+//     let $li = $(`<li>${doc.data().name}</li>`);
+//     $ul.append($li);
+//   });
+// });
 
 // practice for the cards
 db.collection("Products").get().then((querySnapshot) => {
@@ -59,3 +60,29 @@ db.collection("Products").get().then((querySnapshot) => {
     $('#products').append($li);
   });
 });
+
+// Testimonials Carousel
+db.collection("Testimonials").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    let $li = $(`
+      <div class="card d-flex justify-content-center m-3" style="width: 18rem">
+        <img
+          src="${doc.data().imageURL}"
+          class="card-img-top rounded-circle"
+          alt="profile pic"
+          style="width: 100%; height: auto"
+        />
+        <hr style="width: 90%; margin: auto" />
+        <div class="card-body d-flex flex-column text-center">
+          <div class="d-flex row">
+            <h2>${doc.data().name}</h2>
+            <h5>${doc.data().title}</h5>
+            <p>${doc.data().comment}</p>
+          </div>
+        </div>
+      </div>
+    `);
+    $('#testimonials').append($li);
+  });
+});
+
