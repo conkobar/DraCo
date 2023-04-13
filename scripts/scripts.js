@@ -13,11 +13,76 @@ const db = firebase.firestore(app);
 
 // Get the unordered list element
 let $ul = $("#product-list");
+let $testimonials = $("#testimonials-list")
 
 // Get all documents from the Products collection
+// db.collection("Products").get().then((querySnapshot) => {
+  // prints all elements into list in HTML
+//   querySnapshot.forEach((doc) => {
+//     let $li = $(`<li>${doc.data().name}</li>`);
+//     $ul.append($li);
+//   });
+// });
+
+// practice for the cards
 db.collection("Products").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
-    let $li = $(`<li>${doc.data().name}</li>`);
-    $ul.append($li);
+    let $li = $(`
+      <div class="card d-flex justify-content-center m-3" style="width: 18rem">
+        <img
+          src="${doc.data().imageURL}"
+          class="card-img-top"
+          alt="product image"
+          style="width: 100%; height: auto"
+        />
+        <hr style="width: 90%; margin: auto" />
+        <div class="card-body d-flex flex-column text-center">
+          <div class="d-flex row">
+            <h2>${doc.data().name}</h2>
+            <p>${doc.data().description}</p>
+          </div>
+        </div>
+        <div class="card-footer d-flex pt-3">
+          <div class="d-flex mx-2">
+            <img
+              src="../images/misc/galleon_black.png"
+              class="pt-2 pb-3"
+              style="width: 10%; height: 100%"
+            />
+            <h2 class="py-1">${doc.data().price}</h2>
+          </div>
+          <div class="pt-2 mx-2">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </div>
+    `);
+    $('#products').append($li);
   });
 });
+
+// Testimonials Carousel
+db.collection("Testimonials").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    let $li = $(`
+      <div class="card d-flex justify-content-center m-3" style="width: 18rem">
+        <img
+          src="${doc.data().imageURL}"
+          class="card-img-top rounded-circle"
+          alt="profile pic"
+          style="width: 100%; height: auto"
+        />
+        <hr style="width: 90%; margin: auto" />
+        <div class="card-body d-flex flex-column text-center">
+          <div class="d-flex row">
+            <h2>${doc.data().name}</h2>
+            <h5>${doc.data().title}</h5>
+            <p>${doc.data().comment}</p>
+          </div>
+        </div>
+      </div>
+    `);
+    $('#testimonials').append($li);
+  });
+});
+
