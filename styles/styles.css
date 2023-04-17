@@ -58,6 +58,7 @@ nav {
   text-shadow: 2px 2px 2px var(--color-dark);
 }
 
+
 .navbar-item a:hover {
   color: var(--color-gold) !important;
 }
@@ -65,8 +66,6 @@ nav {
 #burger {
   width: 2rem;
   height: auto;
-  
-  
 }
 #hero-img {
   width: 50%;
@@ -179,4 +178,29 @@ img.rotate {
 .carousel-control-prev:active .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23deb16f'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e")
 }
+/* #region BEEZCHURGER */
+
+.dropdown-item {
+  text-shadow: 0 0 0 0;
+  color: var(--color-light);
+}
+
+.dropdown-menu {
+  background-color: var(--color-dark);
+  font-size: 0.75em;
+}
+
+.show,
+.show:active,
+.show:focus {
+  border: 0 !important;
+  outline:none !important;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+  background-color: var(--color-black);
+  color: var(--color-gold) !important;
+}
+
 /* #endregion */
