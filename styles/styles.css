@@ -58,6 +58,7 @@ nav {
   text-shadow: 2px 2px 2px var(--color-dark);
 }
 
+
 .navbar-item a:hover {
   color: var(--color-gold) !important;
 }
@@ -65,8 +66,6 @@ nav {
 #burger {
   width: 2rem;
   height: auto;
-  
-  
 }
 #hero-img {
   width: 50%;
@@ -110,6 +109,33 @@ h5 {
 .fa-cart-shopping:hover {
   cursor: pointer;
   color: var(--color-gold)
+}
+
+/* #endregion */
+
+/* #region BEEZCHURGER */
+
+.dropdown-item {
+  text-shadow: 0 0 0 0;
+  color: var(--color-light);
+}
+
+.dropdown-menu {
+  background-color: var(--color-dark);
+  font-size: 0.75em;
+}
+
+.show,
+.show:active,
+.show:focus {
+  border: 0 !important;
+  outline:none !important;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+  background-color: var(--color-black);
+  color: var(--color-gold) !important;
 }
 
 /* #endregion */
