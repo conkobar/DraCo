@@ -12,8 +12,8 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore(app);
 
 // Get the unordered list element
-let $ul = $("#product-list");
-let $testimonials = $("#testimonials-list")
+let ul = $("#product-list");
+let testimonials = $("#testimonials-list")
 
 // Get all documents from the Products collection
 // db.collection("Products").get().then((querySnapshot) => {
@@ -27,7 +27,7 @@ let $testimonials = $("#testimonials-list")
 // practice for the cards
 db.collection("Products").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
-    let $li = $(`
+    let li = $(`
       <div class="card d-flex justify-content-center m-3" style="width: 18rem">
         <img
           src="${doc.data().imageURL}"
@@ -57,32 +57,61 @@ db.collection("Products").get().then((querySnapshot) => {
         </div>
       </div>
     `);
-    $('#products').append($li);
+    $('#products').append(li);
   });
 });
 
 // Testimonials Carousel
 db.collection("Testimonials").get().then((querySnapshot) => {
+  let first = true;
   querySnapshot.forEach((doc) => {
-    let $li = $(`
-      <div class="card d-flex justify-content-center m-3" style="width: 18rem">
-        <img
-          src="${doc.data().imageURL}"
-          class="card-img-top rounded-circle"
-          alt="profile pic"
-          style="width: 100%; height: auto"
-        />
-        <hr style="width: 90%; margin: auto" />
-        <div class="card-body d-flex flex-column text-center">
-          <div class="d-flex row">
-            <h2>${doc.data().name}</h2>
-            <h5>${doc.data().title}</h5>
-            <p>${doc.data().comment}</p>
+    let li = $(`
+      <div class="carousel-item ${first ? 'active' : ''}">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-sm-12 col-md-4 p-3 image-container">
+              <img src="../images/misc/pngegg.png" class="rotate border-image" height="150px">
+              <img
+                src="${doc.data().imageURL}"
+                class="content-image rounded-circle mx-auto d-block"
+                alt="profile pic"
+                style="width: 150px; height: auto"
+              />
+            </div>
+            <div class="col-sm-12 col-md-8 text-center text-md-left p-3 px-md-5">
+              <h2>${doc.data().name}</h2>
+              <h6>${doc.data().title}</h6>
+              <p class="quote">"${doc.data().comment}"</p>
+            </div>
           </div>
         </div>
       </div>
     `);
-    $('#testimonials').append($li);
+    $('#testimonials').append(li);
+    first = false;
   });
+  setTimeout(() => {
+    let maxHeight = 0;
+    $('.carousel-item').each(function() {
+      let cardHeight = $(this).height();
+      if (cardHeight > maxHeight) {
+        maxHeight = cardHeight;
+      }
+    });
+    $('.carousel-item').height(maxHeight);
+    $(window).resize(); // manually trigger the resize event
+  }, 100);
+});
+
+$(window).on('resize', function () {
+  let maxHeight = 0;
+  $('.carousel-item').height('auto'); // reset the height of all carousel items to auto
+  $('.carousel-item').each(function() {
+    let cardHeight = $(this).height();
+    if (cardHeight > maxHeight) {
+      maxHeight = cardHeight;
+    }
+  });
+  $('.carousel-item').height(maxHeight);
 });
 
