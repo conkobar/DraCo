@@ -32,7 +32,7 @@ body {
 }
 
 .livvic {
-  font-family: 'Livvic', sans-serif;
+  font-family: 'Livvic', sans-serif !important;
 }
 
 .gold {
@@ -65,8 +65,6 @@ nav {
 #burger {
   width: 2rem;
   height: auto;
-  
-  
 }
 #hero-img {
   width: 50%;
@@ -91,6 +89,7 @@ h1 {
 }
 
 /* FOOTER STYLING */
+
 h5 {
   letter-spacing: 3px;
 }
@@ -100,7 +99,44 @@ h5 {
 
 }
 
+/* CONTACT PAGE STYLING */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.accordion-button:hover {
+  color: var(--color-gold) !important;
+}
+.accordion-button {
+  background-color: var(--color-light);
+  color: var(--color-black) !important;
+  font-size: 18px;
+}
+.accordion-header {
+  border: none !important;
+}
+.accordion-item {
+  border: none;
+}
+.accordion-body {
+  background-color: var(--color-light);
+}
+.accordion {
+  --bs-accordion-active-bg: var(--color-light);
+  --bs-accordion-border-color: var(--color-light) !important;
+}
 
+#contact_form {
+  background-image: url('../images/logos/wallpaper_tp_gold-2.png');
+  background-position: center;
+  background-position: top;
+  background-size: 78%;
+}
+#form_bg {
+  background-color: transparent;
+}
+#name {
+  
+}
 /* #region SHOPPING CART */
 
 .fa-cart-shopping {
