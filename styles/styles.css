@@ -138,8 +138,15 @@ h6 {
 #form_bg {
   background-color: transparent;
 }
-#name {
-  
+#story {
+  font-size: 18px;
+  text-align:justify;
+}
+#seal {
+  width: 78%;
+}
+#motto {
+  width: 80%;
 }
 /* #region SHOPPING CART */
 
