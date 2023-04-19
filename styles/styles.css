@@ -274,3 +274,12 @@ img.rotate {
 }
 
 /* #endregion */
+
+/* #region SHOP PRODUCTS */
+
+#search-button:hover {
+  color: var(--color-dark) !important;
+  background-color: var(--color-gold) !important;
+}
+
+/* #endregion */

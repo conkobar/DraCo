@@ -28,7 +28,11 @@ let testimonials = $("#testimonials-list")
 db.collection("Products").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
     let li = $(`
-      <div class="card d-flex justify-content-center m-3" style="width: 18rem">
+      <div
+        class="card d-flex justify-content-center m-3 shadow"
+        style="width: 18rem"
+        id="${doc.data().keywords.forEach(keyword => keyword)}"
+      >
         <img
           src="${doc.data().imageURL}"
           class="card-img-top"
@@ -38,7 +42,7 @@ db.collection("Products").get().then((querySnapshot) => {
         <hr style="width: 90%; margin: auto" />
         <div class="card-body d-flex flex-column text-center">
           <div class="d-flex row">
-            <h2>${doc.data().name}</h2>
+            <h2 class="livvic gold">${doc.data().name}</h2>
             <p>${doc.data().description}</p>
           </div>
         </div>
@@ -52,7 +56,7 @@ db.collection("Products").get().then((querySnapshot) => {
             <h2 class="py-1">${doc.data().price}</h2>
           </div>
           <div class="pt-2 mx-2">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>
           </div>
         </div>
       </div>
