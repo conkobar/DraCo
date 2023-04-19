@@ -13,7 +13,7 @@
 	<script src="https://kit.fontawesome.com/bf76f9de02.js" crossorigin="anonymous"></script>
 
   <!-- POPPER -->
-  <script src="https://unpkg.com/@popperjs/core@2"></script>  
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
 
 	<!-- BOOTSTRAP -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,31 +39,71 @@
 <body class="bg-light">
   <header>
     <!-- Nav Bar -->
-      <nav class="d-flex flex-sm-row">
-        <!-- Hamburger -->
-        <button class="navbar-toggler float-left p-2 position-absolute d-sm-none" type="button"
-				data-toggle="collapse" data-target="#navbarLinks">
-				<span><img height="50px" id="burger" src="../images/misc/hamburger.png"></span>
-			</button>
-        <!-- Nav links -->
-        <div class="collapse navbar-collapse d-sm-flex col-sm-6 justify-content-center py-2 livvic" id="navbarLinks">
-          <ul class="navbar-nav text-uppercase ml-auto flex-sm-row align-items-center font-weight-bold">
-            <li class="navbar-item">
-              <a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="shop.html">SHOP</a>
-            </li>
-            <li class="navbar-item">
-              <a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="contact.html">CONTACT</a>
-            </li>
-            <li class="navbar-item">
-              <a class="nav-link text-white mx-5 mx-lg-4 mx-sm-4" href="cart.html">CART</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="d-flex justify-content-center">
-        <img id="header-img" class="img-fluid" src="../images/logos/logo_text_black_overlay.png">
+    <nav class="d-flex flex-sm-row">
+      <!-- Hamburger -->
+      <div class="dropdown d-sm-none border-0">
+        <a
+          class="btn"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img height="50px" id="burger" src="../images/misc/hamburger.png" />
+        </a>
+
+        <ul class="dropdown-menu livvic" style="width: 5rem !important">
+          <li><a class="dropdown-item" href="#">SHOP</a></li>
+          <li><a class="dropdown-item" href="#">CONTACT</a></li>
+          <li>
+            <a class="dropdown-item" id="burger-cart" href="cart.html"
+              >CART</a
+            >
+          </li>
+        </ul>
       </div>
-    </header>
+
+      <!-- Nav links -->
+      <div
+        class="collapse navbar-collapse d-sm-flex col-sm-6 justify-content-center py-2 livvic"
+        id="navbarLinks"
+      >
+        <ul
+          class="navbar-nav text-uppercase ml-auto flex-sm-row align-items-center font-weight-bold"
+        >
+          <li class="navbar-item">
+            <a
+              class="nav-link text-white mx-5 mx-lg-4 mx-sm-4"
+              href="shop.html"
+              >SHOP</a
+            >
+          </li>
+          <li class="navbar-item">
+            <a
+              class="nav-link text-white mx-5 mx-lg-4 mx-sm-4"
+              href="contact.html"
+              >CONTACT</a
+            >
+          </li>
+          <li class="navbar-item">
+            <a
+              class="nav-link text-white mx-5 mx-lg-4 mx-sm-4"
+              href="cart.html"
+              >CART</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <a href="index.html" class="d-flex justify-content-center">
+      <img
+        id="header-img"
+        class="img-fluid"
+        src="../images/logos/logo_text_black_overlay.png"
+      />
+    </a>
+  </header>
+
      <!-- About Us Section-->
       <section class="container-fluid bg-dark text-light">
         <div class="container-fluid py-5">
@@ -125,7 +165,7 @@
                     <div class="accordion-body fst-italic text-muted">We hire the finest Owls in the industry, rest assured they are vetted and certified delivery professionals. Your order will arrive in perfect condition or the owls will dispatch an immediate replacement.</div>
                   </div>
                 </div>
-              </div>    
+              </div>
             </div>
             <div class="col-sm-6 col-md-5 py-4">
               <h5 class="fw-bold fst-italic livvic color py-3">International Overnight Owls</h5>
@@ -161,7 +201,7 @@
                       <div class="accordion-body fst-italic text-muted">You're a wizard. Don't worry about it.</div>
                     </div>
                   </div>
-                </div>    
+                </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-5 py-4">
@@ -189,7 +229,7 @@
                   </div>
                 </div>
               </div>
-            </div>    
+            </div>
           </div>
           <div class="col-sm-6 col-md-5 py-4">
             <h5 class="fw-bold fst-italic livvic color dark py-3">Product Care</h5>
@@ -225,7 +265,7 @@
                     <div class="accordion-body fst-italic text-muted">Please use the contact form below for any other questions or concerns regarding your purchase.</div>
                   </div>
                 </div>
-              </div>    
+              </div>
           </div>
         </div>
       </section>
@@ -431,11 +471,11 @@
       <a class="text dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>
   </footer>
-    
+
   </div>
   <!-- End of .container -->
   <!-- <div class="attributions">
     <a href="https://www.flaticon.com/free-icons/menu-bar" title="menu bar icons">Menu bar icons created by Md Tanvirul Haque - Flaticon</a>
-  </div> -->  
+  </div> -->
 </body>
 </html>
