@@ -62,6 +62,8 @@ db.collection("Products").get().then((querySnapshot) => {
 });
 
 // Testimonials Carousel
+let imagesLoaded = 0;
+
 db.collection("Testimonials").get().then((querySnapshot) => {
   let first = true;
   querySnapshot.forEach((doc) => {
@@ -89,23 +91,20 @@ db.collection("Testimonials").get().then((querySnapshot) => {
     `);
     $('#testimonials').append(li);
     first = false;
-  });
-  setTimeout(() => {
-    let maxHeight = 0;
-    $('.carousel-item').each(function() {
-      let cardHeight = $(this).height();
-      if (cardHeight > maxHeight) {
-        maxHeight = cardHeight;
+
+    // Add event listener for the load event to the image
+    li.find('img.content-image').on('load', () => {
+      imagesLoaded++;
+      if (imagesLoaded === querySnapshot.size) {
+        // All images have finished loading
+        setCarouselItemHeight();
       }
     });
-    $('.carousel-item').height(maxHeight);
-    $(window).resize(); // manually trigger the resize event
-  }, 100);
+  });
 });
 
-$(window).on('resize', function () {
+function setCarouselItemHeight() {
   let maxHeight = 0;
-  $('.carousel-item').height('auto'); // reset the height of all carousel items to auto
   $('.carousel-item').each(function() {
     let cardHeight = $(this).height();
     if (cardHeight > maxHeight) {
@@ -113,5 +112,29 @@ $(window).on('resize', function () {
     }
   });
   $('.carousel-item').height(maxHeight);
+}
+
+$(window).on('resize', function () {
+  let maxHeight = 0;
+  $('.carousel-item').height('auto'); // reset the height of all carousel items to auto
+  setCarouselItemHeight();
+});
+
+// Owl carousel
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:5
+      }
+  }
 });
 
