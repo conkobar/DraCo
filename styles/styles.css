@@ -41,6 +41,15 @@ html {
   background-color: var(--color-gold) !important;
 }
 
+.bg-radial-gradient-dark {
+  background-color: var(--color-black);
+  background-image: radial-gradient(
+    circle,
+    var(--color-black),
+    var(--color-dark) 70%
+  );
+}
+
 .livvic {
   font-family: 'Livvic', sans-serif !important;
 }
@@ -100,23 +109,19 @@ h1 {
 
 /* #endregion */
 
-/* #region MISSION */
-
+/* #region MISSION STATEMENT */
 #mission {
   background-image: url('../images/logos/wallpaper_tp_gold-2.png');
 }
-
 #mission h1 {
   text-shadow: 2px 2px var(--color-gold);
 }
-<<<<<<< HEAD
+#mission p {
+  text-align: justify;
+}
+
 /* #endregion */
 
-=======
-#mission p {
-  text-align:justify;
-}
->>>>>>> ca9fae9e646dd662a6805ad2b18f1d837f43039f
 /* #region FOOTER */
 h5,
 h6 {
@@ -175,7 +180,7 @@ h6 {
 }
 #story {
   font-size: 18px;
-  text-align:justify;
+  text-align: justify;
 }
 #seal {
   width: 78%;
@@ -197,8 +202,6 @@ h6 {
   color: var(--color-gold);
 }
 
-<<<<<<< HEAD
-=======
 .card-body {
   font: var(--font-family);
   color: var(--color-dark);
@@ -220,11 +223,9 @@ h6 {
   font-size: 12px;
   border-radius: 3px;
 }
-
 .show-tooltip .tooltip {
   display: block;
 }*/
->>>>>>> ca9fae9e646dd662a6805ad2b18f1d837f43039f
 /* #endregion */
 
 /* #region MISSION */
@@ -325,11 +326,6 @@ img.rotate {
 #search-button:hover {
   color: var(--color-dark) !important;
   background-color: var(--color-gold) !important;
-}
-
-#search-bar:focus {
-  text-decoration: none;
-  color: var(--color-gold);
 }
 
 /* #endregion */
