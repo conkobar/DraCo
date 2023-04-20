@@ -42,7 +42,7 @@ db.collection("Products").get().then((querySnapshot) => {
         <hr style="width: 90%; margin: auto" />
         <div class="card-body d-flex flex-column text-center">
           <div class="d-flex row">
-            <h2 class="livvic gold">${doc.data().name}</h2>
+            <h4 class="livvic gold">${doc.data().name}</h4>
             <p>${doc.data().description}</p>
           </div>
         </div>
