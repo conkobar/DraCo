@@ -49,7 +49,7 @@ db.collection("Products")
             <h2 class="py-1">${doc.data().price}</h2>
           </div>
           <div class="pt-2 mx-2">
-            <i class="fa-solid fa-cart-shopping" onclick="addToCart('${doc.data().name}', '${doc.data().price}')"></i>
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('${doc.data()}')"></i>
           </div>
         </div>
       </div>
@@ -143,15 +143,15 @@ function getCartFromStorage() {
   return cart;
 }
 
-function addToCart(name, price, quantity = 1) {
+function addToCart(data) {
   // retrieve current cart or create new one
   let cart = getCartFromStorage();
   // check whether item is in cart already (if so, update quantity)
-  let itemIndex = cart.findIndex((item) => item.name === name);
+  let itemIndex = cart.findIndex((item) => item.name === data.name);
   if (itemIndex !== -1) {
-    cart[itemIndex].quantity += quantity;
+    cart[itemIndex].quantity += data.quantity;
   } else {
-    cart.push({ name, price, quantity });
+    cart.push({ name: data.name, price: data.price, quantity: 1 });
   }
   // save updated cart
   sessionStorage.setItem("cart", JSON.stringify(cart));
@@ -187,3 +187,41 @@ function showCart() {
 //   addToCart(name, price, quantity);
 //   showCart();
 // });
+
+// shopping cart items
+function buildCart() {
+  let cart = getCartFromStorage();
+
+  cart.forEach((item) => {
+    let itemElem = $(`
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex flex-row align-items-center">
+              <div>
+                <img
+                  src=""
+                  class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+              </div>
+              <div class="ms-3">
+                <h5>Iphone 11 pro</h5>
+                <p class="small mb-0">256GB, Navy Blue</p>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <div style="width: 50px;">
+                <h5 class="fw-normal mb-0">2</h5>
+              </div>
+              <div style="width: 80px;">
+                <h5 class="mb-0">$900</h5>
+              </div>
+              <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `);
+    $('.item').append(itemElem);
+  });
+  
+}
