@@ -85,8 +85,8 @@ db.collection("Testimonials").get().then((querySnapshot) => {
               />
             </div>
             <div class="col-sm-12 col-md-8 text-center text-md-left p-3 px-md-5">
-              <h2>${doc.data().name}</h2>
-              <h6>${doc.data().title}</h6>
+              <h2 class="text-monospace livvic">${doc.data().name}</h2>
+              <h6 class="fw-bold gold">${doc.data().title}</h6>
               <p class="quote">"${doc.data().comment}"</p>
             </div>
           </div>

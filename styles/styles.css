@@ -41,6 +41,11 @@ html {
   background-color: var(--color-gold) !important;
 }
 
+.bg-radial-gradient-dark {
+  background-color: var(--color-black);
+  background-image: radial-gradient(circle,var(--color-black),var(--color-dark) 70%);
+}
+
 .livvic {
   font-family: 'Livvic', sans-serif !important;
 }
@@ -187,6 +192,21 @@ h6 {
   color: var(--color-gold);
 }
 
+.card-body {
+  font: var(--font-family);
+  color: var(--color-dark);
+}
+
+.text-body h5:hover {
+  cursor: pointer;
+  color: var(--color-gold) !important;
+}
+
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
+  }
 /* #endregion */
 
 /* #region MISSION */
