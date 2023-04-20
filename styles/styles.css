@@ -41,11 +41,6 @@ html {
   background-color: var(--color-gold) !important;
 }
 
-.bg-radial-gradient-dark {
-  background-color: var(--color-black);
-  background-image: radial-gradient(circle,var(--color-black),var(--color-dark) 70%);
-}
-
 .livvic {
   font-family: 'Livvic', sans-serif !important;
 }
@@ -106,12 +101,16 @@ h1 {
 /* #endregion */
 
 /* #region MISSION */
+
 #mission {
   background-image: url('../images/logos/wallpaper_tp_gold-2.png');
 }
+
 #mission h1 {
   text-shadow: 2px 2px var(--color-gold);
 }
+/* #endregion */
+
 /* #region FOOTER */
 h5,
 h6 {
@@ -190,16 +189,6 @@ h6 {
 .fa-cart-shopping:hover {
   cursor: pointer;
   color: var(--color-gold);
-}
-
-.card-body {
-  font: var(--font-family);
-  color: var(--color-dark);
-}
-
-.text-body h5:hover {
-  cursor: pointer;
-  color: var(--color-gold) !important;
 }
 
 /* #endregion */
@@ -302,6 +291,11 @@ img.rotate {
 #search-button:hover {
   color: var(--color-dark) !important;
   background-color: var(--color-gold) !important;
+}
+
+#search-bar:focus {
+  text-decoration: none;
+  color: var(--color-gold);
 }
 
 /* #endregion */

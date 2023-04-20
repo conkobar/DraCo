@@ -125,6 +125,7 @@
               id="search-bar"
               class="form-control text-muted fw-lighter fst-italic"
               placeholder="Search . . ."
+              autocomplete="off"
             />
           </div>
         </div>
@@ -134,7 +135,7 @@
             class="btn bg-dark btn-outline-light btn-rounded font-monospace livvic color gold"
             data-mbd-ripple-color="dark"
             id="search-button"
-            onclick="searchKeywords()"
+            onclick="searchKeywords($('#search-bar').val())"
           >
             Search
           </button>
@@ -315,5 +316,4 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <script src="../scripts/scripts.js"></script>
-  </body>
 </html>
