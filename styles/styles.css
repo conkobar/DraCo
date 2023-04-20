@@ -112,6 +112,9 @@ h1 {
 #mission h1 {
   text-shadow: 2px 2px var(--color-gold);
 }
+#mission p {
+  text-align:justify;
+}
 /* #region FOOTER */
 h5,
 h6 {
@@ -202,6 +205,21 @@ h6 {
   color: var(--color-gold) !important;
 }
 
+/*.tooltip {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.show-tooltip .tooltip {
+  display: block;
+}*/
 /* #endregion */
 
 /* #region MISSION */
