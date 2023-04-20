@@ -109,8 +109,14 @@ h1 {
 #mission h1 {
   text-shadow: 2px 2px var(--color-gold);
 }
+<<<<<<< HEAD
 /* #endregion */
 
+=======
+#mission p {
+  text-align:justify;
+}
+>>>>>>> ca9fae9e646dd662a6805ad2b18f1d837f43039f
 /* #region FOOTER */
 h5,
 h6 {
@@ -191,6 +197,34 @@ h6 {
   color: var(--color-gold);
 }
 
+<<<<<<< HEAD
+=======
+.card-body {
+  font: var(--font-family);
+  color: var(--color-dark);
+}
+
+.text-body h5:hover {
+  cursor: pointer;
+  color: var(--color-gold) !important;
+}
+
+/*.tooltip {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.show-tooltip .tooltip {
+  display: block;
+}*/
+>>>>>>> ca9fae9e646dd662a6805ad2b18f1d837f43039f
 /* #endregion */
 
 /* #region MISSION */
