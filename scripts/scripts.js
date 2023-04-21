@@ -140,94 +140,6 @@ $(window).on('resize', function () {
 //   }
 // });
 
-// Cart
-function getCartFromStorage() {
-  let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
-  return cart;
-}
-
-function addToCart(data) {
-  // retrieve current cart or create new one
-  let cart = getCartFromStorage();
-  // check whether item is in cart already (if so, update quantity)
-  let itemIndex = cart.findIndex((item) => item.name === data.name);
-  if (itemIndex !== -1) {
-    cart[itemIndex].quantity += data.quantity;
-  } else {
-    cart.push({ name: data.name, price: data.price, quantity: 1 });
-  }
-  // save updated cart
-  sessionStorage.setItem('cart', JSON.stringify(cart));
-
-  // update cart count
-  // add cart count to button at the top and in burger
-}
-
-function removeFromCart(item) {
-  let cart = getCartFromStorage();
-  let itemIndex = cart.findIndex((cartItem) => cartItem.name === item);
-  if (itemIndex !== -1) {
-    cart.splice(itemIndex, 1);
-    sessionStorage.setItem('cart', JSON.stringify(cart));
-  }
-}
-
-function clearCart() {
-  sessionStorage.clear();
-}
-
-function showCart() {
-  let cart = getCartFromStorage();
-  console.log(cart);
-}
-
-// example cart usage
-// $('#addToCartButton').on('click', () => {
-//   let name = 'Example Product';
-//   let price = 125;
-//   let quantity = 1;
-//   console.log('pressed');
-//   addToCart(name, price, quantity);
-//   showCart();
-// });
-
-// shopping cart items
-function buildCart() {
-  let cart = getCartFromStorage();
-
-  cart.forEach((item) => {
-    let itemElem = $(`
-      <div class="card mb-3">
-        <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <div class="d-flex flex-row align-items-center">
-              <div>
-                <img
-                  src=""
-                  class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-              </div>
-              <div class="ms-3">
-                <h5>Iphone 11 pro</h5>
-                <p class="small mb-0">256GB, Navy Blue</p>
-              </div>
-            </div>
-            <div class="d-flex flex-row align-items-center">
-              <div style="width: 50px;">
-                <h5 class="fw-normal mb-0">2</h5>
-              </div>
-              <div style="width: 80px;">
-                <h5 class="mb-0">$900</h5>
-              </div>
-              <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    `);
-    $('.item').append(itemElem);
-  });
-}
-
 // if no items match search, suggest contact page
 function doubleCheckProducts() {
   if ($('#products').is(':empty')) {
@@ -246,6 +158,10 @@ function doubleCheckProducts() {
 
 // search firestore for given keyword, and display products with it
 async function searchKeywords(keyword) {
+  // check for empty string
+  if (keyword.trim() === '') {
+    return;
+  }
   // query the db
   let query = db
     .collection('Products')
