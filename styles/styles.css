@@ -44,7 +44,11 @@ html {
 
 .bg-radial-gradient-dark {
   background-color: var(--color-black);
-  background-image: radial-gradient(circle,var(--color-black),var(--color-dark) 70%);
+  background-image: radial-gradient(
+    circle,
+    var(--color-black),
+    var(--color-dark) 70%
+  );
 }
 
 .livvic {
@@ -106,7 +110,7 @@ h1 {
 
 /* #endregion */
 
-/* #region MISSION */
+/* #region MISSION STATEMENT */
 #mission {
   background-image: url('../images/logos/wallpaper_tp_gold-2.png');
 }
@@ -114,8 +118,11 @@ h1 {
   text-shadow: 2px 2px var(--color-gold);
 }
 #mission p {
-  text-align:justify;
+  text-align: justify;
 }
+
+/* #endregion */
+
 /* #region FOOTER */
 h5,
 h6 {
@@ -174,7 +181,7 @@ h6 {
 }
 #story {
   font-size: 18px;
-  text-align:justify;
+  text-align: justify;
 }
 #seal {
   width: 78%;
@@ -217,7 +224,6 @@ h6 {
   font-size: 12px;
   border-radius: 3px;
 }
-
 .show-tooltip .tooltip {
   display: block;
 }*/
