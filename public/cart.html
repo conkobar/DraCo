@@ -54,8 +54,8 @@
         </a>
 
         <ul class="dropdown-menu livvic" style="width: 5rem !important">
-          <li><a class="dropdown-item" href="#">SHOP</a></li>
-          <li><a class="dropdown-item" href="#">CONTACT</a></li>
+          <li><a class="dropdown-item" href="shop.html">SHOP</a></li>
+          <li><a class="dropdown-item" href="contact.html">CONTACT</a></li>
           <li>
             <a class="dropdown-item" id="burger-cart" href="cart.html"
               >CART</a
@@ -109,7 +109,7 @@
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
-          <div class="card">
+          <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
             <div class="card-body p-4">
   
               <div class="row">
@@ -136,23 +136,23 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5>Iphone 11 pro</h5>
-                              <p class="small mb-0">256GB, Navy Blue</p>
+                              <h5 class="livvic">Iphone 11 pro</h5>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
-                            <div style="width: 50px;">
-                              <h5 class="fw-normal mb-0">2</h5>
+                            <div class="def-number-input number-input">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                class="minus"></button>
+                              <input class="quantity fw-bold text-dark" min="0" name="quantity" value="1" type="number">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                class="plus"></button>
                             </div>
                             <div style="width: 80px;">
                               <h5 class="mb-0">$900</h5>
                             </div>
-                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
                           </div>
-<<<<<<< HEAD
-                          <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
-=======
->>>>>>> cart
+                          
                         </div>
                       </div>
                     </div>
@@ -167,8 +167,7 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5>Samsung galaxy Note 10 </h5>
-                              <p class="small mb-0">256GB, Navy Blue</p>
+                              <h5 class="livvic">Samsung galaxy Note 10 </h5>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
@@ -178,12 +177,9 @@
                             <div style="width: 80px;">
                               <h5 class="mb-0">$900</h5>
                             </div>
-                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
                           </div>
-<<<<<<< HEAD
-                          <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
-=======
->>>>>>> cart
+
                         </div>
                       </div>
                     </div>
@@ -198,8 +194,7 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5>Canon EOS M50</h5>
-                              <p class="small mb-0">Onyx Black</p>
+                              <h5 class="livvic">Canon EOS M50</h5>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
@@ -209,17 +204,14 @@
                             <div style="width: 80px;">
                               <h5 class="mb-0">$1199</h5>
                             </div>
-                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
                           </div>
-<<<<<<< HEAD
-                          <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
-=======
->>>>>>> cart
+                          
                         </div>
                       </div>
                     </div>
                     <!-- Item 4-->
-                    <div class="card mb-3">
+                    <div class="card mb-3 mb-lg-0">
                       <div class="card-body">
                         <div class="d-flex justify-content-between">
                           <div class="d-flex flex-row align-items-center">
@@ -229,8 +221,7 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5>MacBook Pro</h5>
-                              <p class="small mb-0">1TB, Graphite</p>
+                              <h5 class="livvic">MacBook Pro</h5>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
@@ -240,12 +231,9 @@
                             <div style="width: 80px;">
                               <h5 class="mb-0">$1799</h5>
                             </div>
-                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
                           </div>
-<<<<<<< HEAD
-                          <a href="#!" style="color: #cecece;"><i class="fa-solid fa-broom"></i></a>
-=======
->>>>>>> cart
+                          
                         </div>
                       </div>
                     </div>
@@ -258,26 +246,24 @@
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-center mb-2">
                         <h5 class="mb-0 livvic color gold">Payment Details</h5>
-                        <img src="../images/logos/logo_symbol.png" class="img-fluid" style="width: 60px;"
-                          class="img-fluid rounded-3" style="width: 45px;" alt="Ring Logo">
+                        <img src="../images/logos/logo_symbol.png" class="img-fluid" style="width: 75px;" alt="Ring Logo">
                       </div>
 
-                      <img src="../images/misc/Gringotts_Pay_btn.png" class="img-fluid pb-4" style="width: 140px"></a>
-
-                      <p class="small mb-2">Card type</p>
-                      <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-amex fa-2x me-2"></i></a>
-                      <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x me-2"></i></a>
-                      <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-apple-pay fa-2x me-2"></i></a>
-  
+                      <p class="small mb-2 text-center">Card type</p>
+                      <a href="#!" type="submit" class="text-light fs-5"><i class="fab fa-cc-amex fa-2x me-2"></i></a>
+                      <a href="#!" type="submit" class="text-light fs-5"><i class="fab fa-cc-paypal fa-2x me-2"></i></a>
+                      <a href="#!" type="submit" class="text-light fs-5"><i class="fab fa-cc-apple-pay fa-2x me-2"></i></a>
+                      <img src="../images/misc/Gringotts_Pay_btn.png" class="img-fluid pb-4" style="width: 150px"></a>
+                      
                       <form class="mt-4">
                         <div class="form-outline form-white mb-4">
-                          <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                            placeholder="Cardholder's Name" />
-                          <label class="form-label" for="typeName">Cardholder's Name</label>
+                          <input type="text" id="typeName" class="form-control form-control-md" siez="17"
+                            placeholder="Wizard's Name" />
+                          <label class="form-label" for="typeName">Wizard's Name</label>
                         </div>
   
                         <div class="form-outline form-white mb-4">
-                          <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                          <input type="text" id="typeText" class="form-control form-control-md" siez="17"
                             placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
                           <label class="form-label" for="typeText">Card Number</label>
                         </div>
@@ -285,14 +271,14 @@
                         <div class="row mb-4">
                           <div class="col-md-6">
                             <div class="form-outline form-white">
-                              <input type="text" id="typeExp" class="form-control form-control-lg"
+                              <input type="text" id="typeExp" class="form-control form-control-md"
                                 placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
                               <label class="form-label" for="typeExp">Expiration</label>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-outline form-white">
-                              <input type="password" id="typeText" class="form-control form-control-lg"
+                              <input type="password" id="typeText" class="form-control form-control-md"
                                 placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
                               <label class="form-label" for="typeText">Cvv</label>
                             </div>
@@ -303,19 +289,19 @@
   
                       <hr class="my-4">
   
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between livvic color gold">
                         <p class="mb-2">Subtotal</p>
-                        <p class="mb-2">$4798.00</p>
+                        <p class="mb-2">4798</p>
                       </div>
   
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-2">Shipping</p>
-                        <p class="mb-2">$20.00</p>
+                      <div class="d-flex justify-content-between livvic color gold">
+                        <p class="mb-2">Owls (Estimated)</p>
+                        <p class="mb-2">5</p>
                       </div>
   
-                      <div class="d-flex justify-content-between mb-4">
-                        <p class="mb-2">Total(Incl. taxes)</p>
-                        <p class="mb-2">$4818.00</p>
+                      <div class="d-flex justify-content-between livvic color gold mb-4">
+                        <p class="mb-2">Total Due</p>
+                        <p class="mb-2">6475</p>
                       </div>
                       <!-- Pay Me Right Meow -->
                       <button type="button" class="btn btn-outline-light btn-rounded font-monospace livvic color gold mb-4" data-mbd-ripple-color="dark">
@@ -456,17 +442,17 @@
 						<h5 class="text-uppercase livvic color gold">Help</h5>
 						<ul class="list-unstyled mb-0">
 							<li>
-								<a href="contact.html" class="text-light text-decoration-none"
+								<a href="contact.html#about" class="text-light text-decoration-none"
 									>About</a
 								>
 							</li>
 							<li>
-								<a href="contact.html" class="text-light text-decoration-none"
+								<a href="contact.html#faq" class="text-light text-decoration-none"
 									>FAQ</a
 								>
 							</li>
 							<li>
-								<a href="contact.html" class="text-light text-decoration-none"
+								<a href="contact.html#contact_form" class="text-light text-decoration-none"
 									>Contact</a
 								>
 							</li>
