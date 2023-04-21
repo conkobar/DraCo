@@ -3,6 +3,12 @@
   height: 100vh !important;
   }
   }
+
+  @media (max-width: 500px) {
+    .d-flex .number-input {
+      width: 80px !important;
+    }
+  }
   
   .number-input input[type="number"] {
   -webkit-appearance: textfield;
@@ -84,37 +90,37 @@
   }
   }
   
-  .shopping-cart .def-number-input.number-input {
+  .card-body .def-number-input.number-input {
   border: none;
   }
   
-  .shopping-cart .def-number-input.number-input input[type=number] {
+  .card-body .def-number-input.number-input input[type=number] {
   max-width: 2rem;
   border: none;
   }
   
-  .shopping-cart .def-number-input.number-input input[type=number].black-text,
-  .shopping-cart .def-number-input.number-input input.btn.btn-link[type=number],
-  .shopping-cart .def-number-input.number-input input.md-toast-close-button[type=number]:hover,
-  .shopping-cart .def-number-input.number-input input.md-toast-close-button[type=number]:focus {
+  .card-body .def-number-input.number-input input[type=number].black-text,
+  .card-body .def-number-input.number-input input.btn.btn-link[type=number],
+  .card-body .def-number-input.number-input input.md-toast-close-button[type=number]:hover,
+  .card-body .def-number-input.number-input input.md-toast-close-button[type=number]:focus {
   color: #212529 !important;
   }
   
-  .shopping-cart .def-number-input.number-input button {
+  .card-body .def-number-input.number-input button {
   width: 1rem;
   }
   
-  .shopping-cart .def-number-input.number-input button:before,
-  .shopping-cart .def-number-input.number-input button:after {
+  .card-body .def-number-input.number-input button:before,
+  .card-body .def-number-input.number-input button:after {
   width: .5rem;
   }
   
-  .shopping-cart .def-number-input.number-input button.minus:before,
-  .shopping-cart .def-number-input.number-input button.minus:after {
+  .card-body .def-number-input.number-input button.minus:before,
+  .card-body .def-number-input.number-input button.minus:after {
   background-color: #9e9e9e;
   }
   
-  .shopping-cart .def-number-input.number-input button.plus:before,
-  .shopping-cart .def-number-input.number-input button.plus:after {
-  background-color: #4285f4;
+  .card-body .def-number-input.number-input button.plus:before,
+  .card-body .def-number-input.number-input button.plus:after {
+  background-color: var(--color-gold);
   }

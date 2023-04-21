@@ -29,6 +29,7 @@
         crossorigin="anonymous"></script>
 
     <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../styles/input.css">
     <link rel="stylesheet" href="../styles/styles.css" />
 
     <!-- JQUERY -->
@@ -136,7 +137,7 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5 class="livvic">Iphone 11 pro</h5>
+                              <p class="livvic">Iphone 11 pro</p>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
@@ -167,12 +168,16 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5 class="livvic">Samsung galaxy Note 10 </h5>
+                              <p class="livvic">Samsung galaxy Note 10 </p>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
-                            <div style="width: 50px;">
-                              <h5 class="fw-normal mb-0">2</h5>
+                            <div class="def-number-input number-input">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                class="minus"></button>
+                              <input class="quantity fw-bold text-dark" min="0" name="quantity" value="1" type="number">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                class="plus"></button>
                             </div>
                             <div style="width: 80px;">
                               <h5 class="mb-0">$900</h5>
@@ -194,12 +199,16 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5 class="livvic">Canon EOS M50</h5>
+                              <p class="livvic">Canon EOS M50</p>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
-                            <div style="width: 50px;">
-                              <h5 class="fw-normal mb-0">1</h5>
+                            <div class="def-number-input number-input">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                class="minus"></button>
+                              <input class="quantity fw-bold text-dark" min="0" name="quantity" value="1" type="number">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                class="plus"></button>
                             </div>
                             <div style="width: 80px;">
                               <h5 class="mb-0">$1199</h5>
@@ -221,12 +230,16 @@
                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                             </div>
                             <div class="ms-3">
-                              <h5 class="livvic">MacBook Pro</h5>
+                              <p class="livvic">MacBook Pro</p>
                             </div>
                           </div>
                           <div class="d-flex flex-row align-items-center">
-                            <div style="width: 50px;">
-                              <h5 class="fw-normal mb-0">1</h5>
+                            <div class="def-number-input number-input">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                class="minus"></button>
+                              <input class="quantity fw-bold text-dark" min="0" name="quantity" value="1" type="number">
+                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                class="plus"></button>
                             </div>
                             <div style="width: 80px;">
                               <h5 class="mb-0">$1799</h5>
