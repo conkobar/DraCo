@@ -44,7 +44,7 @@ db.collection('Products')
             <img
               src="../images/misc/galleon_black.png"
               class="pt-2 pb-3"
-              style="width: 10%; height: 100%"
+              style="width: 10%"
             />
             <h2 class="py-1">${doc.data().price}</h2>
           </div>
